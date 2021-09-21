@@ -13,4 +13,4 @@ for (let i=0;   i<=s1.length-1;i++) {
 }
 
 
-console.log(s2)
+console.log(s1)

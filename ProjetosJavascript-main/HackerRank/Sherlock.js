@@ -1,4 +1,11 @@
-let s = "aabbccddeefghi";
+let s = "abcdefghhgfedecba";
+
+
+let boolnumber=0;
+let key_max;
+let key_min;
+
+
 
 
 const occurrences = {};
@@ -11,9 +18,55 @@ const occurrences = {};
         }
     }
 
+    console.log(occurrences);
+
+    var obj= Object.values(occurrences).reduce((acc,val,index)=> {
+        if (typeof acc[val]==='undefined'){
+            acc[val]=1;
+        } else {
+            acc[val]++
+        }
+        return acc
+    }, {})
+
+
+console.log(obj);
+
+if (Object.keys(obj).length==1){
+    boolnumber=1;
+} else {
+    if (Object.keys(obj).length == 2) {
+        key_max = Object.keys(obj).reduce((a, b) =>  +a > +b ? +a : +b)
+        key_min = Object.keys(obj).reduce((a, b) =>  +a < +b ? +a : +b)
+        console.log(key_max);
+        console.log(key_min);
+        if ((key_max - key_min) == 1 && (obj[key_max] == 1))
+            boolnumber=1;
+        else if (key_min == 1 && obj[key_min] == 1)
+            boolnumber=1;
+    }
+        
+}
+
+
+
+if (boolnumber==1) {
+    console.log("YES")
+}
+else
+    console.log("NO")
+
+
+
+
+
+
+/*
+
+
 console.log(occurrences)
 
-const obj= Object.values(occurrences).reduce((acc,val,index)=> {
+var obj= Object.values(occurrences).reduce((acc,val,index)=> {
     if (typeof acc[val]==='undefined'){
         acc[val]=1;
     } else {
@@ -21,6 +74,13 @@ const obj= Object.values(occurrences).reduce((acc,val,index)=> {
     }
     return acc
 }, {})
+
+console.log(obj);
+
+ Object.keys(obj).forEach(function(key){
+    console.log(obj[key]);
+ });
+
 
 const keys= Object.keys(obj);
 

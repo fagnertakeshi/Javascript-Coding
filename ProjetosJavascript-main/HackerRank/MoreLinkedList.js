@@ -25,7 +25,7 @@ class Solution {
             return head;
 
         };
-            //teste
+            //teste2
         this.insert = function (head, data) {
             var p = new Node(data);
             if (head == null) {

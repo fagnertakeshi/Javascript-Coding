@@ -5,9 +5,7 @@ let boolnumber=0;
 let key_max;
 let key_min;
 
-
-
-
+//faz um map de frequencias da string
 const occurrences = {};
 
     for (const char of s) {
@@ -20,6 +18,7 @@ const occurrences = {};
 
     console.log(occurrences);
 
+    // conta quantas frequencias de cada numero aparecem
     var obj= Object.values(occurrences).reduce((acc,val,index)=> {
         if (typeof acc[val]==='undefined'){
             acc[val]=1;
@@ -31,15 +30,13 @@ const occurrences = {};
 
 
 console.log(obj);
-
+// se tiver somente a frequencia de uma letra
 if (Object.keys(obj).length==1){
     boolnumber=1;
 } else {
     if (Object.keys(obj).length == 2) {
         key_max = Object.keys(obj).reduce((a, b) =>  +a > +b ? +a : +b)
         key_min = Object.keys(obj).reduce((a, b) =>  +a < +b ? +a : +b)
-        console.log(key_max);
-        console.log(key_min);
         if ((key_max - key_min) == 1 && (obj[key_max] == 1))
             boolnumber=1;
         else if (key_min == 1 && obj[key_min] == 1)

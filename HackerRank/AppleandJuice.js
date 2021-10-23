@@ -24,6 +24,8 @@ let apples = [-2,2,1]
 
 let oranges = [5,-6]
 
+//teste;
+
 
 function countApplesAndOranges(s, t, a, b, apples, oranges){
 

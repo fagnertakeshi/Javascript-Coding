@@ -17,6 +17,6 @@ let isBalancedParenthesis = (str) => {
     }, 0);
 }
 
-console.log(Math.abs(isBalancedParenthesis("((()"))); 
+console.log(Math.abs(isBalancedParenthesis(s))); 
 
 

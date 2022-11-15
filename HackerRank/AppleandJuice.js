@@ -27,6 +27,7 @@ let oranges = [5,-6]
 //teste;
 
 
+
 function countApplesAndOranges(s, t, a, b, apples, oranges){
 
     /* função apples.map soma todos os elementos e cria um novo array a

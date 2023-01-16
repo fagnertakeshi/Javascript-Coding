@@ -7,6 +7,7 @@ let nota2=9;
 // teste de commit; novo
 
 //acrescentei essas linhas;
+//teste de branch
 
 a=(nota1<0 || nota1>10)
 b= nota2 <0 || nota2>10
